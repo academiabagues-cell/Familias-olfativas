@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto con Desbloqueo</title>
+    <title>Selección de Fragancias</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    <div class="bloqueado">
-        <h2>Contenido Secreto</h2>
-        <p>Este contenido está bloqueado. Ingresa la contraseña para verlo.</p>
-        <input type="password" id="passwordInput" placeholder="Contraseña">
-        <button onclick="verificarContrasena()">Desbloquear</button>
-    </div>
-    <div class="desbloqueado" style="display:none;">
-        <h2>Contenido Desbloqueado</h2>
-        <p>¡Felicitaciones! Has desbloqueado el contenido.</p>
+
+    <h1>Selecciona tu fragancia</h1>
+
+    <div class="container">
+        <select id="genderSelect">
+            <option value="">-- Género --</option>
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+            <option value="unisex">Unisex</option>
+        </select>
+
+        <select id="familySelect" style="display: none;">
+            <option value="">-- Familia Olfativa --</option>
+        </select>
+
+        <select id="fragranceSelect" style="display: none;">
+            <option value="">-- Nombre de Fragancia --</option>
+        </select>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
