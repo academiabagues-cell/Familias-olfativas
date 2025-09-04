@@ -55,11 +55,3 @@ familySelect.addEventListener('change', () => {
         // Llenamos el menú de fragancias.
         const fragrances = fragranceData[selectedGender][selectedFamily];
         fragrances.forEach(fragrance => {
-            const option = document.createElement('option');
-            option.value = fragrance;
-            option.textContent = fragrance;
-            fragranceSelect.appendChild(option);
-        });
-        fragranceSelect.style.display = 'block';
-    }
-});
