@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto con Desbloqueo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <div class="bloqueado">
+        <h2>Contenido Secreto</h2>
+        <p>Este contenido está bloqueado. Ingresa la contraseña para verlo.</p>
+        <input type="password" id="passwordInput" placeholder="Contraseña">
+        <button onclick="verificarContrasena()">Desbloquear</button>
+    </div>
+    <div class="desbloqueado" style="display:none;">
+        <h2>Contenido Desbloqueado</h2>
+        <p>¡Felicitaciones! Has desbloqueado el contenido.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
