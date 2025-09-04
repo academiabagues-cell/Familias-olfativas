@@ -1,17 +1,36 @@
 // Este es el objeto que simula los datos de tu archivo de Excel.
-// Puedes modificarlo para que coincida con tus datos reales.
+// Lo he modificado con las familias olfativas que mencionaste.
 const fragranceData = {
     "femenino": {
-        "floral": ["Jasmine Bloom", "Rose Garden", "Lily Valley"],
-        "frutal": ["Cherry Pop", "Peach Sparkle", "Berry Bliss"]
+        "Almizcle Floral Amaderada": ["Fragancia F1", "Fragancia F2"],
+        "Ambar Floral": ["Fragancia F3", "Fragancia F4"],
+        "Floral": ["Fragancia F5", "Fragancia F6"],
+        "Floral Frutal": ["Fragancia F7", "Fragancia F8"],
+        "Floral Frutal Gourdmand": ["Fragancia F9", "Fragancia F10"],
+        "Floral Oriental": ["Fragancia F11", "Fragancia F12"],
+        "Oriental": ["Fragancia F13", "Fragancia F14"],
+        "Oriental Amaderado": ["Fragancia F15", "Fragancia F16"],
     },
     "masculino": {
-        "amaderada": ["Cedar Storm", "Sandalwood Noir", "Oak Forest"],
-        "especiada": ["Spiced Citrus", "Black Pepper", "Amber Spice"]
+        "Amaderada": ["Fragancia M1", "Fragancia M2"],
+        "Amaderada Ambarada Gourdmand": ["Fragancia M3", "Fragancia M4"],
+        "Amaderada Aromática Gourdmand": ["Fragancia M5", "Fragancia M6"],
+        "Amaderada Oriental Especiado": ["Fragancia M7", "Fragancia M8"],
+        "Ambarada Floral": ["Fragancia M9", "Fragancia M10"],
+        "Cítrica": ["Fragancia M11", "Fragancia M12"],
+        "Especiada Amaderada Fresca": ["Fragancia M13", "Fragancia M14"],
+        "Fougère": ["Fragancia M15", "Fragancia M16"],
+        "Oriental Fougère": ["Fragancia M17", "Fragancia M18"],
     },
     "unisex": {
-        "citrica": ["Lime Zest", "Orange Grove", "Lemon Fresh"],
-        "oriental": ["Oud Desire", "Vanilla Dream", "Musk Mystery"]
+        "Amaderada": ["Fragancia U1", "Fragancia U2"],
+        "Amaderada Ambarada Gourdmand": ["Fragancia U3", "Fragancia U4"],
+        "Amaderada Aromática Gourdmand": ["Fragancia U5", "Fragancia U6"],
+        "Cítrica": ["Fragancia U7", "Fragancia U8"],
+        "Especiada Amaderada Fresca": ["Fragancia U9", "Fragancia U10"],
+        "Fougère": ["Fragancia U11", "Fragancia U12"],
+        "Oriental": ["Fragancia U13", "Fragancia U14"],
+        "Oriental Amaderado": ["Fragancia U15", "Fragancia U16"],
     }
 };
 
@@ -55,3 +74,11 @@ familySelect.addEventListener('change', () => {
         // Llenamos el menú de fragancias.
         const fragrances = fragranceData[selectedGender][selectedFamily];
         fragrances.forEach(fragrance => {
+            const option = document.createElement('option');
+            option.value = fragrance;
+            option.textContent = fragrance;
+            fragranceSelect.appendChild(option);
+        });
+        fragranceSelect.style.display = 'block';
+    }
+});
