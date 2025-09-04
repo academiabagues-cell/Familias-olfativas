@@ -1,5 +1,3 @@
-// Este es el objeto que simula los datos de tu archivo de Excel.
-// Lo he modificado con las familias olfativas que mencionaste.
 const fragranceData = {
     "femenino": {
         "Almizcle Floral Amaderada": ["Fragancia F1", "Fragancia F2"],
